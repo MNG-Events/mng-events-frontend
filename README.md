@@ -1,5 +1,7 @@
 # mngevents
 
+Repository containing the MNG Events web application developed with Vue.js and TypeScript.
+
 ## Project setup
 ```
 npm install

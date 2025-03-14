@@ -5,18 +5,17 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 import { useAuthStore } from "@/stores/auth";
+import { onMounted } from "vue";
 
-export default defineComponent({
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
+onMounted(() => {
+  const userStore = useAuthStore();
+  userStore.signIn('jj.quesadaacosta@hotmail.com', 'jotajota')
+  console.log(userStore.user)
 });
 
-useAuthStore().signIn('jj.quesadaacosta@hotmail.com', 'jotajota')
-console.log(useAuthStore().user)
+
+
 </script>

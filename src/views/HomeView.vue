@@ -8,6 +8,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { useAuthStore } from "@/stores/auth";
 
 export default defineComponent({
   name: "HomeView",
@@ -15,4 +16,7 @@ export default defineComponent({
     HelloWorld,
   },
 });
+
+useAuthStore().signIn('jj.quesadaacosta@hotmail.com', 'jotajota')
+console.log(useAuthStore().user)
 </script>

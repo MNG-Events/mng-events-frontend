@@ -33,7 +33,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/vuetify.js"  ],
   "exclude": [
     "node_modules"
   ]
